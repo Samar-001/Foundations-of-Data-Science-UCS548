@@ -25,7 +25,7 @@ dsg_continent_le <- dsg %>% group_by(Continent, Year) %>% summarise(Avg_Life_Exp
 print(dsg_continent_le, n=120)
 
 # Q1.4
-"Creating report having Year, Date, and Guest_Name columns without dplyr"
+"5 countries having the highest total GDP over all years combined"
 dsg_highest_GDP <- dsg %>% mutate(GDP = gdpPerc*Pop) %>% group_by(Country) %>% summarise(Total_GDP = sum(GDP)) %>% arrange(desc(Total_GDP)) %>% head(5)
 print(dsg_highest_GDP)
 
